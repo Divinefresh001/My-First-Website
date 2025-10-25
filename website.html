@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My First Webpage</title>
+  <style>
+    /* Reset default margins */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #d7bfa7;
+      color: #333;
+    }
+
+    /* NAVIGATI0N BAR */
+    nav {
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+    }
+
+    nav h2 {
+      font-size: 24px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 50px;
+
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      font-size: 25px;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #0077cc;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .hero img {
+      width: 300px;
+      border-radius: 50%;
+      margin-top: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .hero h1 {
+      font-size: 40px;
+      color: #0077cc;
+      margin-bottom: 30px;
+    }
+
+    .hero p {
+      font-size: 25px;
+      color: #444;
+    }
+
+    /* ABOUT SECTION */
+    .about {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .about h2 {
+      color: #0077cc;
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+
+    .about p {
+      max-width: 600px;
+      margin: auto;
+      line-height: 1.6;
+      font-size: 25px;
+    }
+
+    /* CONTACT SECTION */
+    .contact {
+      background-color: #e6f2ff;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .contact h2 {
+      color: #0077cc;
+      margin-bottom: 20px;
+    }
+
+    form {
+      max-width: 500px;
+      margin: auto;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+      outline: none;
+    }
+
+    form input:focus,
+    form textarea:focus {
+      border-color: #0077cc;
+    }
+
+    form button {
+      background-color: #0077cc;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      color: white;
+      padding: 12px 25px;
+      transition: background-color 0.3s;
+      font-size: 16px;
+    }
+
+    form button:hover {
+      background-color: #005fa3;
+    }
+
+
+    /* FOOTER */
+    footer {
+      background-color: #0077cc;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+
+    /* MOBILE FRIENDLY */
+    @media(max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .hero h1 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- NAVIGATION -->
+  <nav>
+    <h2>MyWebsite</h2>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="home">
+    <h1>Welcome to My First Website!</h1>
+    <p>Learning HTML & CSS is fun</p>
+    <img src="images/divine.hotboy.jpg" alt="My Profile photo">
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section class="about">
+    <h2>About Me</h2>
+    <p>
+      Hello! I'm just starting my web development journey.
+      This is my first webpage - built with love using HTML and CSS.
+      My goal is to become a professional Front-end developer soon.
+    </p>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact" id="contact">
+    <h2>Contact Me</h2>
+    <form action="https://formspree.io/f/mgvpwpbq" method="POST"
+      onsubmit="alert('Thanks! Your message has been sent.')">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 My First Website. All rights reserved.
+    </p>
+  </footer>
+
+
+</body>
+
+</html>
